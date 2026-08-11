@@ -1,0 +1,113 @@
+.projects-section {
+  text-align: center;
+  margin-top: 200px; 
+  margin-bottom: 400px;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.projects-section h2 {
+  color: #005f73;
+  font-size: 2.5rem;
+  font-family: 'Organo', sans-serif;
+  margin-bottom: 40px;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns na magkakatabi */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- BAGONG IMAGE OVERLAY CARD DESIGN (Inalis ang Box Effect) --- */
+.project-card {
+  position: relative; 
+  border-radius: 12px;
+  overflow: hidden; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  height: 350px; /* Pare-parehong taas */
+  transition: transform 0.3s ease;
+}
+
+/* Aangat ang buong card kapag itinapat ang mouse */
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.5s ease;
+  z-index: 1; /* Ilalagay sa ilalim ng text */
+}
+
+/* Zoom effect sa picture kapag ni-hover */
+.project-card:hover .project-img {
+  transform: scale(1.08); 
+}
+
+/* ITO ANG DARK SHADOW SA IBABA (Imbes na solid box sa gitna) */
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Itutulak ang mga text sa ibabang bahagi */
+  z-index: 2; /* Para lumutang sa ibabaw ng picture */
+  text-align: left; /* Naka-left align para mas malinis basahin */
+}
+
+/* Mga kulay at sukat ng text para lumutang sa dark shadow */
+.project-category {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  color: #94d2bd;
+  font-weight: bold;
+}
+
+.project-overlay h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.project-overlay p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* 📱 RESPONSIVE DESIGN: Para sa Tablets (2 columns) */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📱 RESPONSIVE DESIGN: Para sa Smartphones (1 column pababa) */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    height: 300px; 
+  }
+}

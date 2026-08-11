@@ -1,0 +1,260 @@
+.modern-about-page {
+  background-color: Transparent;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.about-page-header {
+  background-color: #003f4f;
+  color: white;
+  text-align: center;
+  padding: 120px 20px 80px 20px;
+}
+
+.about-page-header h1 {
+font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+  font-size: 3rem;
+  margin: 0 0 15px 0;
+  letter-spacing: 2px;
+}
+
+.about-page-header p {
+  color: #94d2bd;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-page-container {
+  max-width: 1200px;
+  margin: -40px auto 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.about-story-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  background: transparent;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.main-about-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 15px 25px rgba(0, 95, 115, 0.1);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: #005f73;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 3px solid #94d2bd;
+  animation: floatEffect 4s ease-in-out infinite;
+}
+
+@keyframes floatEffect {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.badge-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #94d2bd;
+}
+
+.about-subtitle {
+  color: #94d2bd;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.about-title {
+  color: #005f73;
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.about-description p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.brand-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 70px;
+}
+
+.highlight-box {
+  background: white;
+  border-top: 4px solid #94d2bd;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box h4 {
+  color: #005f73;
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+}
+
+.highlight-box p {
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.mvv-header-title {
+  text-align: center;
+  color: #005f73;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.mvv-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.mvv-card:hover {
+  transform: translateY(-10px);
+}
+
+.mvv-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.mvv-card:hover .mvv-image {
+  transform: scale(1.08);
+}
+
+.mvv-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+  text-align: left;
+}
+
+.mvv-content h3 {
+  color: #94d2bd;
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mvv-content p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.back-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modern-back-button {
+  background-color: #4a6ee0;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 8px;
+  text-decoration: none;
+ font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.modern-back-button:hover {
+  background-color: #3858b8; 
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .about-story-section {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  .brand-highlights, .mvv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-highlights, .mvv-grid {
+    grid-template-columns: 1fr;
+  }
+  .experience-badge {
+    right: 10px;
+    bottom: -10px;
+    padding: 15px 20px;
+  }
+  .badge-number {
+    font-size: 1.5rem;
+  }
+}

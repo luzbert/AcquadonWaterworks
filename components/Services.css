@@ -1,0 +1,150 @@
+.modern-services-section {
+  background-color: transparent;
+  padding: 100px 20px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.services-image-wrapper {
+  position: relative;
+}
+
+.main-services-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 15px 30px rgba(0, 95, 115, 0.15);
+}
+
+/* Floating badge animation - Creates a gentle up-and-down hovering effect */
+.service-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: #005f73;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 3px solid #94d2bd;
+  animation: serviceFloat 4s ease-in-out infinite;
+}
+
+@keyframes serviceFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.badge-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.badge-text {
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94d2bd;
+}
+
+.services-subtitle {
+  color: #94d2bd;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.services-title {
+  color: #003f4f;
+  font-size: 3rem;
+  font-family: 'Organo', sans-serif;
+  margin: 0 0 20px 0;
+}
+
+.services-description p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.services-highlight-text {
+  color: #005f73 !important;
+  font-size: 1.2rem !important;
+  margin-top: 30px;
+}
+
+/* Grid layout for the 3 core operation boxes */
+.core-operations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Hover effects for operation cards */
+.operation-box {
+  background: white;
+  border-top: 4px solid #94d2bd;
+  padding: 30px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.operation-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.operation-box h4 {
+  color: #005f73;
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.operation-box p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Mobile responsiveness adjustments */
+@media (max-width: 992px) {
+  .services-split-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .core-operations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .core-operations-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-badge {
+    right: 10px;
+    bottom: -10px;
+    padding: 15px 20px;
+  }
+}

@@ -1,0 +1,19 @@
+body {
+  /* THE FIX: Tinatawag natin yung picture mula sa assets folder */
+  background-image: url('./assets/bg logo.png');
+  
+  /* Para sumakto sa buong screen */
+  background-size: cover; 
+  
+  /* Para hindi umulit ang picture */
+  background-repeat: no-repeat;
+  
+  /* Igigitna ang picture */
+  background-position: center top; 
+  
+  /* SUPER IMPORTANT: Para hindi gumalaw ang background kahit mag-scroll ka pababa */
+  background-attachment: fixed; 
+  
+  margin: 0;
+  padding: 0;
+}
