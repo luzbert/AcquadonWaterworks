@@ -1,0 +1,107 @@
+/* BUONG FOOTER CONTAINER */
+.modern-footer {
+  background-color: #003f4f; /* Modernong dark blue-green */
+  color: #e0e0e0;
+  padding: 60px 0 0 0;
+  font-family: 'Sans-serif', Arial, sans-serif;
+  margin-top: 200px; 
+}
+
+/* 2-COLUMN GRID LAYOUT */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Naka-dalawang hati */
+  gap: 40px;
+  max-width: 900px; /* Saktong lapad para sa dalawang column */
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+
+/* TITLES NG MGA COLUMN */
+.footer-title {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+   font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+
+}
+
+/* Linya na kulay mint green sa ilalim ng Title */
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #94d2bd;
+  border-radius: 2px;
+   font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+/* DESIGN NG MGA TEXT */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Agwat sa pagitan ng Office at Phone */
+}
+
+.footer-item strong {
+  color: #94d2bd; /* Mint green para lumutang yung labels */
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.footer-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #b0c4c9;
+}
+
+/* ANIMATED LINKS (Ito yung magbibigay "buhay") */
+.animated-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block; 
+}
+
+/* Kapag tinapatan ng mouse, iilaw at uusad nang kaunti! */
+.animated-link:hover {
+  color: #94d2bd;
+  transform: translateX(8px); /* Aandar pakanan */
+  text-shadow: 0 0 8px rgba(148, 210, 189, 0.4);
+}
+
+/* BOTTOM COPYRIGHT BAR */
+.footer-bottom {
+  background-color: #002b36;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #88a1a8;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* RESPONSIVE DESIGN: Para sa mga Cellphone */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Magiging 1 column kapag sa phone */
+    text-align: center;
+  }
+  
+  /* Igigitna ang linya sa phone */
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .animated-link:hover {
+    transform: translateX(0) scale(1.05); /* Lalaki na lang imbes na uusad pakanan sa mobile */
+  }
+}

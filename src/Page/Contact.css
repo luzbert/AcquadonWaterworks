@@ -1,0 +1,125 @@
+/* src/Page/Contact.css */
+.contact-page-container {
+  padding: 120px 20px 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Sans serif', sans-serif;
+}
+
+.contact-form-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Sakto lang ang lapad tulad sa picture */
+}
+
+.contact-form-card h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.contact-form-group {
+  margin-bottom: 20px;
+}
+
+/* Disenyo ng mga input fields, dropdown, at textarea */
+.contact-input,
+.contact-select,
+.contact-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  border-color: royalblue;
+}
+
+.contact-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Disenyo ng Send Button */
+.contact-submit-btn {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.contact-submit-btn:hover {
+  background-color: royalblue;
+}
+
+.contact-result-msg {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: green;
+  font-weight: bold;
+}
+.contact-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap; 
+}
+.contact-form-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.contact-info-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.contact-info-card h2 {
+  margin-bottom: 25px;
+  color: #0b3954;
+  font-size: 1.8rem;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.contact-info-card p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #555;
+  
+}
+
+.contact-info-card strong {
+  color: #0b3954;
+  font-size: 1.1rem;
+    font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}

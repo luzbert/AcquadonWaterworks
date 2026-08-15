@@ -1,0 +1,177 @@
+/* src/Page/Category.css */
+.category-container {
+  padding: 120px 20px 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Sans serif', sans-serif;
+}
+
+.category-header h1 {
+  color: #0b3954;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.category-header p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+   font-family: 'Sans serif', sans-serif;
+}
+
+/* GRID PARA SA MGA ITEMS (Automatic mag-aadjust ang columns) */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* KAHON NG BAWAT ITEM */
+.item-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ font-family: 'Sans serif', sans-serif;
+}
+
+.item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(11, 57, 84, 0.15);
+  border-color: royalblue;
+}
+
+/* PICTURE NG ITEM */
+.item-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0; /* Kulay gray na background kung wala pang picture */
+}
+
+/* PANGALAN AT DESCRIPTION */
+.item-title {
+  color: #0b3954;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.item-desc {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1; /* Para pantay-pantay ang ilalim ng mga cards */
+}
+
+/* BUTTON PABALIK */
+.back-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: royalblue;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+     font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.back-button:hover {
+  background-color: #0b3954;
+}
+/* --- IMAGE OVERLAY CARD DESIGN PARA SA PROJECTS --- */
+
+.overlay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.overlay-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 350px; /* Sakto lang na taas para makita ang buong picture */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.overlay-card:hover {
+  transform: translateY(-8px); /* Aangat ng konti pag tinapatan ng mouse */
+}
+
+/* Papalakihin natin ang image para sakop ang buong kahon */
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+/* Pag nag-hover, mag-zoom ng konti yung picture sa loob */
+.overlay-card:hover .overlay-image {
+  transform: scale(1.08);
+}
+
+/* Ito yung dark shadow sa ilalim para mabasa ang text nang malinaw */
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Itutulak ang text sa ibaba */
+  z-index: 2; /* Para lumutang ang text sa ibabaw ng picture */
+  text-align: left;
+}
+
+.overlay-title {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.overlay-desc {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.overlay-btn {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: max-content; /* Sakto lang sa haba ng salita ang button */
+  transition: background-color 0.3s ease;
+}
+
+.overlay-btn:hover {
+  background-color: #082a45;
+}

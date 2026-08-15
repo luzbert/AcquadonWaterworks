@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Organo';
+  /* Siguraduhing tama ang pangalan ng file mo dito. Kung .otf ito, palitan ng .otf */
+  src: url('./fonts/Organo.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  /* THE FIX: Tinatawag natin yung picture mula sa assets folder */
+  background-image: url('./assets/bg logo.jpg');
+  
+  /* Para sumakto sa buong screen */
+  background-size: cover; 
+  
+  /* Para hindi umulit ang picture */
+  background-repeat: no-repeat;
+  
+  /* Igigitna ang picture */
+  background-position: center top; 
+  
+  /* SUPER IMPORTANT: Para hindi gumalaw ang background kahit mag-scroll ka pababa */
+  background-attachment: fixed; 
+  
+  margin: 0;
+  padding: 0;
+}

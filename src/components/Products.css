@@ -1,0 +1,98 @@
+.products-section {
+  text-align: center;
+  margin-top: 400px; 
+  margin-bottom: 400px;
+  font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+}
+
+.products-section h2 {
+  color: #005f73;
+  font-size: 2.5rem;
+ font-family: 'Organo (colored version at: logomagazin.com/organo-font)', sans-serif;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 950px;
+  margin: 0 auto; 
+}
+
+/* --- INALIS ANG PUTING BOX, GINAWANG OVERLAY CARD --- */
+.product-card {
+  position: relative;
+  border-radius: 10px; 
+  overflow: hidden; /* Siguraduhing hindi lalagpas ang picture sa bilog na kanto */
+  height: 250px; /* Nilagyan natin ng fixed height para pantay-pantay ang lahat */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  /* Inalis na natin ang background-color at padding dito */
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Medyo pinalalim ang anino kapag ni-hover */
+}
+
+/* --- PICTURE NA SAKOP ANG BUONG KAHON --- */
+.product-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: 1; /* Nasa ilalim ng text */
+}
+
+/* Zoom effect sa picture kapag itinapat ang mouse */
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* --- BAGONG DARK SHADOW SA IBABA PARA SA TEXT --- */
+.product-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 18px;
+  /* Heto ang shadow na paitim sa ibaba para kitang-kita ang text */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Itutulak ang title pababa */
+  z-index: 2; /* Para lumutang sa ibabaw ng picture */
+  text-align: left; /* Mas maganda kung left-aligned ang text sa overlay */
+}
+
+/* --- TEXT DESIGN --- */
+.product-card h3 {
+  font-size: 1.15rem;
+  color: #ffffff; /* Ginawang puti ang text para bumagay sa dark shadow */
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .products-section h2 {
+    font-size: 2rem;
+  }
+}
